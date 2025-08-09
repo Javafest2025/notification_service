@@ -163,3 +163,9 @@ logging:
     org.hibernate.SQL: DEBUG
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
     org.springframework.security: DEBUG
+
+    # quiet only Eureka-related logs
+    com.netflix.discovery: WARN
+    com.netflix.eureka: WARN
+    org.springframework.cloud.netflix.eureka: WARN
+    org.springframework.cloud.client.discovery: INFO
