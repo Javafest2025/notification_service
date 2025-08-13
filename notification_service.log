@@ -1,0 +1,240 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------< org.solace.scholar_ai:notification_service >-------------
+[INFO] Building notification_service 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.5.4:run (default-cli) > test-compile @ notification_service >>>
+[INFO] 
+[INFO] --- git-commit-id:9.0.2:revision (default) @ notification_service ---
+[INFO] dotGitDirectory 'D:\Javafest2025\ScholarAI\Microservices\notification_service\.git'
+[INFO] Collected git.branch with value main
+[INFO] Collected git.commit.id.abbrev with value 035bd06
+[INFO] Collected git.commit.user.name with value Tasriad Ahmed Tias
+[INFO] Collected git.commit.message.full with value logging config updated
+[INFO] including property 'git.commit.user.name' in results
+[INFO] including property 'git.commit.id.abbrev' in results
+[INFO] including property 'git.branch' in results
+[INFO] including property 'git.commit.message.full' in results
+[INFO] Reading existing properties file [D:\Javafest2025\ScholarAI\Microservices\notification_service\target\classes\git.properties] (for project notification_service)...
+[INFO] Properties file [D:\Javafest2025\ScholarAI\Microservices\notification_service\target\classes\git.properties] is up-to-date (for module notification_service)...
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ notification_service ---
+[INFO] Copying 4 resources from src\main\resources to target\classes
+[INFO] Copying 4 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ notification_service ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- spotless:2.43.0:check (default) @ notification_service ---
+[INFO] Spotless.Java is keeping 9 files clean - 0 needs changes to be clean, 0 were already clean, 9 were skipped because caching determined they were already clean
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ notification_service ---
+[INFO] skip non existing resourceDirectory D:\Javafest2025\ScholarAI\Microservices\notification_service\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ notification_service ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] <<< spring-boot:3.5.4:run (default-cli) < test-compile @ notification_service <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.5.4:run (default-cli) @ notification_service ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.4)
+
+2025-08-12T16:09:33.378+06:00  INFO 8420 --- [notification-service] [  restartedMain] o.s.s.n.NotificationServiceApplication   : Starting NotificationServiceApplication using Java 21.0.3 with PID 8420 (D:\Javafest2025\ScholarAI\Microservices\notification_service\target\classes started by Tasriad Ahmed Tias in D:\Javafest2025\ScholarAI\Microservices\notification_service)
+2025-08-12T16:09:33.380+06:00  INFO 8420 --- [notification-service] [  restartedMain] o.s.s.n.NotificationServiceApplication   : The following 1 profile is active: "local"
+2025-08-12T16:09:33.428+06:00  INFO 8420 --- [notification-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-12T16:09:33.428+06:00  INFO 8420 --- [notification-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-12T16:09:34.877+06:00  INFO 8420 --- [notification-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-12T16:09:34.912+06:00  INFO 8420 --- [notification-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 0 JPA repository interfaces.
+2025-08-12T16:09:35.241+06:00  INFO 8420 --- [notification-service] [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a1a06901-e074-3854-83e5-aa08f4833904
+2025-08-12T16:09:35.985+06:00  INFO 8420 --- [notification-service] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-08-12T16:09:36.000+06:00  INFO 8420 --- [notification-service] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-12T16:09:36.000+06:00  INFO 8420 --- [notification-service] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-12T16:09:36.066+06:00  INFO 8420 --- [notification-service] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-12T16:09:36.066+06:00  INFO 8420 --- [notification-service] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2637 ms
+2025-08-12T16:09:36.239+06:00 DEBUG 8420 --- [notification-service] [  restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2025-08-12T16:09:36.240+06:00 DEBUG 8420 --- [notification-service] [  restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2025-08-12T16:09:36.397+06:00  INFO 8420 --- [notification-service] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-12T16:09:36.480+06:00  INFO 8420 --- [notification-service] [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-12T16:09:36.525+06:00  INFO 8420 --- [notification-service] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-12T16:09:36.947+06:00  INFO 8420 --- [notification-service] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-12T16:09:36.993+06:00  INFO 8420 --- [notification-service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-12T16:09:37.214+06:00  INFO 8420 --- [notification-service] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3a2a3224
+2025-08-12T16:09:37.216+06:00  INFO 8420 --- [notification-service] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-12T16:09:37.281+06:00  WARN 8420 --- [notification-service] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-12T16:09:37.309+06:00  INFO 8420 --- [notification-service] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-12T16:09:37.751+06:00  INFO 8420 --- [notification-service] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-12T16:09:37.758+06:00  INFO 8420 --- [notification-service] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-12T16:09:37.792+06:00  INFO 8420 --- [notification-service] [  restartedMain] o.s.s.n.config.MailConfig                : Configuring JavaMailSender with host: smtp.gmail.com, port: 587, username: scholarai.official@gmail.com
+2025-08-12T16:09:37.810+06:00  INFO 8420 --- [notification-service] [  restartedMain] o.s.s.n.config.MailConfig                : JavaMailSender configured successfully
+2025-08-12T16:09:38.254+06:00  WARN 8420 --- [notification-service] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-12T16:09:38.361+06:00 DEBUG 8420 --- [notification-service] [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 8 mappings in 'requestMappingHandlerMapping'
+2025-08-12T16:09:38.469+06:00 DEBUG 8420 --- [notification-service] [  restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-08-12T16:09:38.502+06:00 DEBUG 8420 --- [notification-service] [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-08-12T16:09:38.569+06:00 DEBUG 8420 --- [notification-service] [  restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-08-12T16:09:39.233+06:00  INFO 8420 --- [notification-service] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-12T16:09:39.339+06:00  WARN 8420 --- [notification-service] [  restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-08-12T16:09:39.349+06:00  INFO 8420 --- [notification-service] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2025-08-12T16:09:39.630+06:00 DEBUG 8420 --- [notification-service] [  restartedMain] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/
+2025-08-12T16:09:39.782+06:00 DEBUG 8420 --- [notification-service] [  restartedMain] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:09:39.829+06:00 DEBUG 8420 --- [notification-service] [  restartedMain] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:09:39.832+06:00 DEBUG 8420 --- [notification-service] [  restartedMain] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-08-12T16:09:39.881+06:00 DEBUG 8420 --- [notification-service] [foReplicator-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/NOTIFICATION-SERVICE
+2025-08-12T16:09:39.884+06:00 DEBUG 8420 --- [notification-service] [foReplicator-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:09:39.901+06:00  INFO 8420 --- [notification-service] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-08-12T16:09:39.902+06:00 DEBUG 8420 --- [notification-service] [foReplicator-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = Legion-of-Tias.mshome.net:notification-service:8082, appName = NOTIFICATION-SERVICE, hostName = localhost, status = UP, ipAddr = 172.27.112.1, port = 8082, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@1a5b21f3] as "application/json"
+2025-08-12T16:09:39.915+06:00  INFO 8420 --- [notification-service] [  restartedMain] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-08-12T16:09:39.934+06:00 DEBUG 8420 --- [notification-service] [foReplicator-%d] o.s.web.client.RestTemplate              : Response 204 NO_CONTENT
+2025-08-12T16:09:40.009+06:00  INFO 8420 --- [notification-service] [  restartedMain] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#1bd28538:0/SimpleConnection@1343984f [delegate=amqp://scholar@127.0.0.1:5672/, localPort=52541]
+2025-08-12T16:09:40.098+06:00  INFO 8420 --- [notification-service] [  restartedMain] o.s.s.n.NotificationServiceApplication   : Started NotificationServiceApplication in 7.278 seconds (process running for 8.228)
+2025-08-12T16:10:09.872+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2025-08-12T16:10:09.873+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/NOTIFICATION-SERVICE/Legion-of-Tias.mshome.net:notification-service:8082?status=UP&lastDirtyTimestamp=1754993379875
+2025-08-12T16:10:09.873+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:10:09.878+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:10:09.892+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:10:09.893+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:10:09.894+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-08-12T16:10:39.894+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/NOTIFICATION-SERVICE/Legion-of-Tias.mshome.net:notification-service:8082?status=UP&lastDirtyTimestamp=1754993379875
+2025-08-12T16:10:39.895+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:10:39.910+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2025-08-12T16:10:39.911+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:10:39.914+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:10:39.931+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:10:39.931+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-08-12T16:11:09.929+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/NOTIFICATION-SERVICE/Legion-of-Tias.mshome.net:notification-service:8082?status=UP&lastDirtyTimestamp=1754993379875
+2025-08-12T16:11:09.929+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:11:09.945+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2025-08-12T16:11:09.946+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:11:09.949+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:11:09.964+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:11:09.964+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-08-12T16:11:39.952+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/NOTIFICATION-SERVICE/Legion-of-Tias.mshome.net:notification-service:8082?status=UP&lastDirtyTimestamp=1754993379875
+2025-08-12T16:11:39.953+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:11:39.969+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2025-08-12T16:11:39.969+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:11:39.977+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:11:39.979+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:11:39.979+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-08-12T16:12:09.998+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2025-08-12T16:12:09.998+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/NOTIFICATION-SERVICE/Legion-of-Tias.mshome.net:notification-service:8082?status=UP&lastDirtyTimestamp=1754993379875
+2025-08-12T16:12:09.998+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:12:09.998+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:12:10.018+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:12:10.018+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:12:10.018+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-08-12T16:12:40.019+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/NOTIFICATION-SERVICE/Legion-of-Tias.mshome.net:notification-service:8082?status=UP&lastDirtyTimestamp=1754993379875
+2025-08-12T16:12:40.019+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:12:40.031+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2025-08-12T16:12:40.031+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:12:40.038+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:12:40.038+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:12:40.044+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-08-12T16:13:10.046+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/NOTIFICATION-SERVICE/Legion-of-Tias.mshome.net:notification-service:8082?status=UP&lastDirtyTimestamp=1754993379875
+2025-08-12T16:13:10.047+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:13:10.061+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2025-08-12T16:13:10.062+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:13:10.065+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:13:10.079+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:13:10.079+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-08-12T16:13:40.070+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/NOTIFICATION-SERVICE/Legion-of-Tias.mshome.net:notification-service:8082?status=UP&lastDirtyTimestamp=1754993379875
+2025-08-12T16:13:40.071+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:13:40.086+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2025-08-12T16:13:40.086+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:13:40.090+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:13:40.105+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:13:40.105+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-08-12T16:14:10.101+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/NOTIFICATION-SERVICE/Legion-of-Tias.mshome.net:notification-service:8082?status=UP&lastDirtyTimestamp=1754993379875
+2025-08-12T16:14:10.101+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:14:10.111+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2025-08-12T16:14:10.111+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:14:10.119+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:14:10.126+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:14:10.126+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-08-12T16:14:40.128+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/NOTIFICATION-SERVICE/Legion-of-Tias.mshome.net:notification-service:8082?status=UP&lastDirtyTimestamp=1754993379875
+2025-08-12T16:14:40.128+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:14:40.138+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2025-08-12T16:14:40.138+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:14:40.146+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:14:40.153+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:14:40.153+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-08-12T16:15:10.154+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/NOTIFICATION-SERVICE/Legion-of-Tias.mshome.net:notification-service:8082?status=UP&lastDirtyTimestamp=1754993379875
+2025-08-12T16:15:10.154+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:15:10.164+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2025-08-12T16:15:10.164+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:15:10.164+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:15:10.172+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:15:10.175+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-08-12T16:15:40.176+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/NOTIFICATION-SERVICE/Legion-of-Tias.mshome.net:notification-service:8082?status=UP&lastDirtyTimestamp=1754993379875
+2025-08-12T16:15:40.176+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:15:40.182+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2025-08-12T16:15:40.183+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:15:40.188+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:15:40.193+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:15:40.194+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-08-12T16:16:10.192+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/NOTIFICATION-SERVICE/Legion-of-Tias.mshome.net:notification-service:8082?status=UP&lastDirtyTimestamp=1754993379875
+2025-08-12T16:16:10.192+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:16:10.200+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2025-08-12T16:16:10.200+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:16:10.205+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:16:10.213+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:16:10.213+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-08-12T16:16:40.207+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/NOTIFICATION-SERVICE/Legion-of-Tias.mshome.net:notification-service:8082?status=UP&lastDirtyTimestamp=1754993379875
+2025-08-12T16:16:40.208+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:16:40.222+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2025-08-12T16:16:40.223+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:16:40.227+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:16:40.241+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:16:40.242+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-08-12T16:17:10.239+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/NOTIFICATION-SERVICE/Legion-of-Tias.mshome.net:notification-service:8082?status=UP&lastDirtyTimestamp=1754993379875
+2025-08-12T16:17:10.239+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:17:10.255+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2025-08-12T16:17:10.255+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:17:10.258+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:17:10.273+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:17:10.273+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-08-12T16:17:40.264+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/NOTIFICATION-SERVICE/Legion-of-Tias.mshome.net:notification-service:8082?status=UP&lastDirtyTimestamp=1754993379875
+2025-08-12T16:17:40.264+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:17:40.275+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:17:40.275+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2025-08-12T16:17:40.275+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:17:40.298+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:17:40.298+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-08-12T16:18:10.291+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/NOTIFICATION-SERVICE/Legion-of-Tias.mshome.net:notification-service:8082?status=UP&lastDirtyTimestamp=1754993379875
+2025-08-12T16:18:10.291+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:18:10.307+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2025-08-12T16:18:10.307+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:18:10.307+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:18:10.323+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:18:10.323+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-08-12T16:18:40.313+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/NOTIFICATION-SERVICE/Legion-of-Tias.mshome.net:notification-service:8082?status=UP&lastDirtyTimestamp=1754993379875
+2025-08-12T16:18:40.313+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:18:40.323+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:18:40.323+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2025-08-12T16:18:40.329+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:18:40.336+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:18:40.336+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-08-12T16:19:10.342+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2025-08-12T16:19:10.342+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/NOTIFICATION-SERVICE/Legion-of-Tias.mshome.net:notification-service:8082?status=UP&lastDirtyTimestamp=1754993379875
+2025-08-12T16:19:10.343+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:19:10.343+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2025-08-12T16:19:10.365+06:00 DEBUG 8420 --- [notification-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:19:10.365+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2025-08-12T16:19:10.365+06:00 DEBUG 8420 --- [notification-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
