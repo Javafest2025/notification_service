@@ -1,39 +1,54 @@
 package org.solace.scholar_ai.notification_service.config;
 
+import java.io.InputStream;
 import java.util.Properties;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
+import org.springframework.mail.javamail.MimeMessageHelper;
+import org.springframework.mail.javamail.MimeMessagePreparator;
 
 @Configuration
 @Slf4j
 public class MailConfig {
 
-    @Value("${spring.mail.host}")
-    private String host;
+    // Using System.getProperty to avoid circular reference with @Value
+    private String getMailHost() {
+        return System.getenv("GMAIL_ADDRESS") != null ? "smtp.gmail.com" : "smtp.gmail.com";
+    }
 
-    @Value("${spring.mail.port}")
-    private int port;
+    private int getMailPort() {
+        return 587;
+    }
 
-    @Value("${spring.mail.username}")
-    private String username;
+    private String getMailUsername() {
+        return System.getenv("GMAIL_ADDRESS");
+    }
 
-    @Value("${spring.mail.password}")
-    private String password;
+    private String getMailPassword() {
+        return System.getenv("GMAIL_APP_PASSWORD");
+    }
 
-    @Value("${spring.mail.protocol:smtp}")
-    private String protocol;
+    private String getMailProtocol() {
+        return "smtp";
+    }
 
     @Bean
     public JavaMailSender javaMailSender() {
+        String host = getMailHost();
+        int port = getMailPort();
+        String username = getMailUsername();
+        String password = getMailPassword();
+        String protocol = getMailProtocol();
+        
         log.info("Configuring JavaMailSender with host: {}, port: {}, username: {}", host, port, username);
 
         if (username == null || username.isEmpty() || password == null || password.isEmpty()) {
-            log.error(
-                    "Mail credentials are not configured. Please set GMAIL_ADDRESS and GMAIL_APP_PASSWORD environment variables.");
+            log.error("Mail credentials are not configured. Please set GMAIL_ADDRESS and GMAIL_APP_PASSWORD environment variables.");
             throw new IllegalStateException("Mail credentials are not configured");
         }
 
@@ -58,4 +73,6 @@ public class MailConfig {
         log.info("JavaMailSender configured successfully");
         return mailSender;
     }
+
+
 }

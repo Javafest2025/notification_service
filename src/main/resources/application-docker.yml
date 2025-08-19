@@ -7,31 +7,29 @@ spring:
     inetutils:
       preferred-networks: 127.0.0.1
       ignored-interfaces: ".*"
-  eureka:
-    client:
-      service-url:
-        defaultZone: http://localhost:8761/eureka/
-      register-with-eureka: true
-      fetch-registry: true
-    instance:
-      prefer-ip-address: true
-      hostname: localhost
-      ip-address: 127.0.0.1
-      instance-id: ${spring.application.name}:${server.port}
-      appname: ${spring.application.name}
-      secure-port-enabled: false
-      non-secure-port-enabled: true
-      lease-renewal-interval-in-seconds: 30
-      lease-expiration-duration-in-seconds: 90
-
   datasource:
-    url: jdbc:postgresql://localhost:${NOTIFICATION_DB_PORT}/notificationDB
+    url: jdbc:postgresql://notification-db:5432/notificationDB
     username: ${NOTIFICATION_DB_USER}
     password: ${NOTIFICATION_DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
     hikari:
       minimum-idle: 3
       maximum-pool-size: 5
+eureka:
+  client:
+    service-url:
+      defaultZone: http://service-registry:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true
+    hostname: notification-service
+    instance-id: ${spring.application.name}:${server.port}
+    appname: ${spring.application.name}
+    secure-port-enabled: false
+    non-secure-port-enabled: true
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
   
   # Flyway configuration
   flyway:
@@ -60,37 +58,27 @@ spring:
         use_sql_comments: true
 
   rabbitmq:
-    host: ${RABBITMQ_HOST:localhost}
-    port: ${RABBITMQ_PORT:5672}
+    host: user-rabbitmq
+    port: 5672
     username: ${RABBITMQ_USER}
     password: ${RABBITMQ_PASSWORD}
 
-  # Email Configuration (Gmail SMTP)
+  # Email Configuration (Gmail SMTP) - Simplified for now
   mail:
     host: smtp.gmail.com
     port: 587
     username: ${GMAIL_ADDRESS:}
     password: ${GMAIL_APP_PASSWORD:}
     protocol: smtp
-    properties:
-      mail:
-        smtp:
-          auth: true
-          starttls:
-            enable: true
-          connectiontimeout: 5000
-          timeout: 5000
-          writetimeout: 5000
-          ssl:
-            trust: smtp.gmail.com
 
-  # Thymeleaf Configuration
-  thymeleaf:
-    cache: false
-    mode: HTML
-    encoding: UTF-8
-    servlet:
-      content-type: text/html
+rabbitmq:
+  notification:
+    queue:
+      name: notification-queue
+    exchange:
+      name: notification-exchange
+    routing:
+      key: notification-routing-key
 
 server:
   port: 8082
