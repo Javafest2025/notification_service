@@ -6,22 +6,24 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: scholar-notification-service
+    env_file:
+      - .env
     ports:
       - "8082:8082"
     environment:
-      - SPRING_PROFILES_ACTIVE=docker
+      - SPRING_PROFILES_ACTIVE=${SPRING_PROFILE}
       - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://service-registry:8761/eureka/
-      - NOTIFICATION_DB_PORT=5434
-      - NOTIFICATION_DB_USER=scholar
-      - NOTIFICATION_DB_PASSWORD=FindSolace@0
+      - NOTIFICATION_DB_PORT=${NOTIFICATION_DB_PORT}
+      - NOTIFICATION_DB_USER=${NOTIFICATION_DB_USER}
+      - NOTIFICATION_DB_PASSWORD=${NOTIFICATION_DB_PASSWORD}
       - RABBITMQ_HOST=user-rabbitmq
-      - RABBITMQ_PORT=5672
-      - RABBITMQ_USER=scholar
-      - RABBITMQ_PASSWORD=FindSolace@0
+      - RABBITMQ_PORT=${RABBITMQ_PORT}
+      - RABBITMQ_USER=${RABBITMQ_USER}
+      - RABBITMQ_PASSWORD=${RABBITMQ_PASSWORD}
       - SPRING_RABBITMQ_HOST=user-rabbitmq
-      - SPRING_RABBITMQ_PORT=5672
-      - SPRING_RABBITMQ_USERNAME=scholar
-      - SPRING_RABBITMQ_PASSWORD=FindSolace@0
+      - SPRING_RABBITMQ_PORT=${RABBITMQ_PORT}
+      - SPRING_RABBITMQ_USERNAME=${RABBITMQ_USER}
+      - SPRING_RABBITMQ_PASSWORD=${RABBITMQ_PASSWORD}
       - GMAIL_ADDRESS=${GMAIL_ADDRESS}
       - GMAIL_APP_PASSWORD=${GMAIL_APP_PASSWORD}
     networks:
