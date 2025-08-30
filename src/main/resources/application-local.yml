@@ -6,7 +6,7 @@ spring:
       enabled: true
 
   datasource:
-    url: jdbc:postgresql://localhost:${NOTIFICATION_DB_PORT}/notificationDB
+    url: jdbc:postgresql://localhost:${NOTIFICATION_DB_PORT:5434}/notificationDB
     username: ${NOTIFICATION_DB_USER}
     password: ${NOTIFICATION_DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
@@ -50,8 +50,8 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: ${GMAIL_ADDRESS:}
-    password: ${GMAIL_APP_PASSWORD:}
+    username: ${GMAIL_ADDRESS}
+    password: ${GMAIL_APP_PASSWORD}
     protocol: smtp
     properties:
       mail:
@@ -89,7 +89,7 @@ app:
   version: 1.0.0
 
 server:
-  port: 8082
+  port: ${SERVER_PORT:8082}
   error:
     include-message: always
     include-binding-errors: always

@@ -1,78 +1,61 @@
 package org.solace.scholar_ai.notification_service.config;
 
-import java.io.InputStream;
 import java.util.Properties;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
-import org.springframework.mail.javamail.MimeMessageHelper;
-import org.springframework.mail.javamail.MimeMessagePreparator;
 
 @Configuration
 @Slf4j
 public class MailConfig {
 
-    // Using System.getProperty to avoid circular reference with @Value
-    private String getMailHost() {
-        return System.getenv("GMAIL_ADDRESS") != null ? "smtp.gmail.com" : "smtp.gmail.com";
-    }
+    @Value("${spring.mail.host:smtp.gmail.com}")
+    private String mailHost;
 
-    private int getMailPort() {
-        return 587;
-    }
+    @Value("${spring.mail.port:587}")
+    private int mailPort;
 
-    private String getMailUsername() {
-        return System.getenv("GMAIL_ADDRESS");
-    }
+    @Value("${spring.mail.username:scholarai.official@gmail.com}")
+    private String mailUsername;
 
-    private String getMailPassword() {
-        return System.getenv("GMAIL_APP_PASSWORD");
-    }
+    @Value("${spring.mail.password}")
+    private String mailPassword;
 
-    private String getMailProtocol() {
-        return "smtp";
-    }
+    @Value("${spring.mail.protocol:smtp}")
+    private String mailProtocol;
 
     @Bean
     public JavaMailSender javaMailSender() {
-        String host = getMailHost();
-        int port = getMailPort();
-        String username = getMailUsername();
-        String password = getMailPassword();
-        String protocol = getMailProtocol();
-        
-        log.info("Configuring JavaMailSender with host: {}, port: {}, username: {}", host, port, username);
+        log.info("Configuring JavaMailSender with host: {}, port: {}, username: {}", mailHost, mailPort, mailUsername);
 
-        if (username == null || username.isEmpty() || password == null || password.isEmpty()) {
-            log.error("Mail credentials are not configured. Please set GMAIL_ADDRESS and GMAIL_APP_PASSWORD environment variables.");
+        if (mailUsername == null || mailUsername.isEmpty() || mailPassword == null || mailPassword.isEmpty()) {
+            log.error(
+                    "Mail credentials are not configured. Please set GMAIL_ADDRESS and GMAIL_APP_PASSWORD environment variables.");
             throw new IllegalStateException("Mail credentials are not configured");
         }
 
         JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
-        mailSender.setHost(host);
-        mailSender.setPort(port);
-        mailSender.setUsername(username);
-        mailSender.setPassword(password);
-        mailSender.setProtocol(protocol);
+        mailSender.setHost(mailHost);
+        mailSender.setPort(mailPort);
+        mailSender.setUsername(mailUsername);
+        mailSender.setPassword(mailPassword);
+        mailSender.setProtocol(mailProtocol);
 
         Properties props = mailSender.getJavaMailProperties();
-        props.put("mail.transport.protocol", protocol);
+        props.put("mail.transport.protocol", mailProtocol);
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
         props.put("mail.smtp.connectiontimeout", "5000");
         props.put("mail.smtp.timeout", "5000");
         props.put("mail.smtp.writetimeout", "5000");
-        props.put("mail.smtp.ssl.trust", host);
+        props.put("mail.smtp.ssl.trust", mailHost);
         props.put("mail.debug", "true");
         props.put("mail.debug.auth", "true");
 
         log.info("JavaMailSender configured successfully");
         return mailSender;
     }
-
-
 }

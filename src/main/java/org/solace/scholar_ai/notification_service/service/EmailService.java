@@ -20,14 +20,11 @@ public class EmailService {
     private final JavaMailSender mailSender;
     private final TemplateEngine templateEngine;
 
-    @Value("${spring.mail.username:}")
+    @Value("${spring.mail.username:scholarai.official@gmail.com}")
     private String fromEmail;
 
     @Value("${app.name:ScholarAI}")
     private String appName;
-
-    @Value("${spring.profiles.active:local}")
-    private String activeProfile;
 
     public void sendWelcomeEmail(String toEmail, String toName, Map<String, Object> templateData) {
         if (fromEmail == null || fromEmail.isEmpty()) {

@@ -4,54 +4,35 @@ spring:
   cloud:
     discovery:
       enabled: true
-    inetutils:
-      preferred-networks: 127.0.0.1
-      ignored-interfaces: ".*"
-  eureka:
-    client:
-      service-url:
-        defaultZone: http://localhost:8761/eureka/
-      register-with-eureka: true
-      fetch-registry: true
-    instance:
-      prefer-ip-address: true
-      hostname: localhost
-      ip-address: 127.0.0.1
-      instance-id: ${spring.application.name}:${server.port}
-      appname: ${spring.application.name}
-      secure-port-enabled: false
-      non-secure-port-enabled: true
-      lease-renewal-interval-in-seconds: 30
-      lease-expiration-duration-in-seconds: 90
 
   datasource:
-    url: jdbc:postgresql://localhost:${NOTIFICATION_DB_PORT}/notificationDB
+    url: jdbc:postgresql://notification-db:5432/notificationDB
     username: ${NOTIFICATION_DB_USER}
     password: ${NOTIFICATION_DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
     hikari:
       minimum-idle: 3
       maximum-pool-size: 5
-  
-  # Flyway configuration
+
+  # Flyway configuration - Disabled for development efficiency
   flyway:
-    enabled: true
-    locations: classpath:db/migration
-    baseline-on-migrate: true
-    validate-on-migrate: true
-    clean-disabled: false
-    out-of-order: false
-    table: flyway_schema_history
-    baseline-version: 0
-    baseline-description: "Initial baseline"
-    placeholders:
-      uuid_type: UUID
-      uuid_default: DEFAULT gen_random_uuid()
-  
+    enabled: false
+    # locations: classpath:db/migration
+    # baseline-on-migrate: true
+    # validate-on-migrate: true
+    # clean-disabled: false
+    # out-of-order: false
+    # table: flyway_schema_history
+    # baseline-version: 0
+    # baseline-description: "Initial baseline"
+    # placeholders:
+    #   uuid_type: UUID
+    #   uuid_default: DEFAULT gen_random_uuid()
+
   # JPA configuration
   jpa:
     hibernate:
-      ddl-auto: validate
+      ddl-auto: update  # Changed from validate to update for development
     show-sql: true
     properties:
       hibernate:
@@ -59,9 +40,10 @@ spring:
         format_sql: true
         use_sql_comments: true
 
+
   rabbitmq:
-    host: ${RABBITMQ_HOST:localhost}
-    port: ${RABBITMQ_PORT:5672}
+    host: user-rabbitmq
+    port: 5672
     username: ${RABBITMQ_USER}
     password: ${RABBITMQ_PASSWORD}
 
@@ -69,8 +51,8 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: ${GMAIL_ADDRESS:}
-    password: ${GMAIL_APP_PASSWORD:}
+    username: ${GMAIL_ADDRESS}
+    password: ${GMAIL_APP_PASSWORD}
     protocol: smtp
     properties:
       mail:
@@ -92,13 +74,44 @@ spring:
     servlet:
       content-type: text/html
 
+# RabbitMQ Custom Configuration
+rabbitmq:
+  notification:
+    queue:
+      name: notification-queue
+    exchange:
+      name: notification-exchange
+    routing:
+      key: notification.#
+
+# Application Configuration
+app:
+  name: ScholarAI Notification Service
+  version: 1.0.0
+
 server:
-  port: 8082
+  port: ${SERVER_PORT:8082}
   error:
     include-message: always
     include-binding-errors: always
     include-stacktrace: never
     include-exception: false
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://service-registry:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true
+    hostname: notification-service
+    instance-id: ${spring.application.name}:${server.port}
+    appname: ${spring.application.name}
+    secure-port-enabled: false
+    non-secure-port-enabled: true
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
 
 
 management:
@@ -160,3 +173,9 @@ logging:
     org.hibernate.SQL: DEBUG
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
     org.springframework.security: DEBUG
+
+    # quiet only Eureka-related logs
+    com.netflix.discovery: WARN
+    com.netflix.eureka: WARN
+    org.springframework.cloud.netflix.eureka: WARN
+    org.springframework.cloud.client.discovery: INFO
