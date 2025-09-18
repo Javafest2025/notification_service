@@ -34,6 +34,9 @@ public class NotificationRequest {
             example = "{\"userName\": \"John\", \"welcomeMessage\": \"Welcome to ScholarAI!\"}")
     private Map<String, Object> templateData;
 
+    // Optional: propagated from user-service for persistence and querying
+    private java.util.UUID userId;
+
     @Schema(description = "Available notification types")
     public enum NotificationType {
         @Schema(description = "Welcome email for new users")
@@ -43,6 +46,14 @@ public class NotificationRequest {
         @Schema(description = "Email verification email")
         EMAIL_VERIFICATION,
         @Schema(description = "Account update notification")
-        ACCOUNT_UPDATE
+        ACCOUNT_UPDATE,
+        @Schema(description = "Web/Paper search completed notification")
+        WEB_SEARCH_COMPLETED,
+        @Schema(description = "Summarization completed notification")
+        SUMMARIZATION_COMPLETED,
+        @Schema(description = "Project deleted notification")
+        PROJECT_DELETED,
+        @Schema(description = "Gap analysis completed notification")
+        GAP_ANALYSIS_COMPLETED
     }
 }
